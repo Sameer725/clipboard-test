@@ -9,3 +9,7 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+1. For no given input the trivial key is returned, for this condition we don't need to check other condition as done in the starter file, if no input is provided we can directly return the trivial value. It makes code more readable as the reader can easily understand the if there is no event it return trivial key.
+
+2. If event is provided we can directly assign the partitionKey property from event to our local partitionKey variable and if the partialKey is undefined i.e event has no partitionKey property or the event for object type is not we stringify the event and do the further processing.
