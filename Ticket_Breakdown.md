@@ -33,7 +33,7 @@ TICKET 2: Update getShiftByFacility Function.
 - Implementation:
   - include the custom_id in the data return when querying for the agent metadata
 
-TICKET 2: Update generateReport Function.
+TICKET 3: Update generateReport Function.
 
 - Time estimation: 1hr
 - Acceptance criteria:
