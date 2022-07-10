@@ -8,7 +8,7 @@ export const deterministicPartitionKey = (event) => {
 
   let partitionKey = event.partitionKey;
 
-  if (partitionKey === undefined) {
+  if (!partitionKey) {
     const data = JSON.stringify(event);
     partitionKey = crypto.createHash("sha3-512").update(data).digest("hex");
   }
