@@ -10,6 +10,6 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 ## Your Explanation Here
 
-1. For no given input the trivial key is returned, for this condition we don't need to check other condition as done in the starter file, if no input is provided we can directly return the trivial value. It makes code more readable as the reader can easily understand the if there is no event it return trivial key.
+1. For no given input the trivial key is returned, for this condition we don't need to check further and directly terminate the function here i.e return from here.Doing this the reader can easily understand that with no event we always get the trivial key.
 
-2. If event is provided we can directly assign the partitionKey property from event to our local partitionKey variable and if the partialKey is undefined i.e event has no partitionKey property or the event is not of type object we stringify the event and do the further processing.
+2. If event is provided we can directly assign the partitionKey property from event to our local partitionKey variable and check if the the partitionKey is a falsely value if it is, we stringify the event and create hash and assign it to the partition value. Reader can easily understand that if event doesn't contain the partitionKey property/ event is not of type object, we simply hash the event itself go for the further check.
